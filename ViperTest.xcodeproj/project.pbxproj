@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		454CC4B22182056000E620F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4B12182056000E620F5 /* AppDelegate.swift */; };
-		454CC4B42182056000E620F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4B32182056000E620F5 /* ViewController.swift */; };
+		454CC4B42182056000E620F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4B32182056000E620F5 /* HomeViewController.swift */; };
 		454CC4B72182056000E620F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454CC4B52182056000E620F5 /* Main.storyboard */; };
 		454CC4B92182056100E620F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454CC4B82182056100E620F5 /* Assets.xcassets */; };
 		454CC4BC2182056100E620F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454CC4BA2182056100E620F5 /* LaunchScreen.storyboard */; };
 		454CC4C72182056100E620F5 /* ViperTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4C62182056100E620F5 /* ViperTestTests.swift */; };
 		454CC4D22182056100E620F5 /* ViperTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4D12182056100E620F5 /* ViperTestUITests.swift */; };
+		454CC4E021821EBD00E620F5 /* HomeViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4DF21821EBD00E620F5 /* HomeViewBuilder.swift */; };
+		454CC4E22182280000E620F5 /* AppColorDataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CC4E12182280000E620F5 /* AppColorDataAccessObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		454CC4AE2182056000E620F5 /* ViperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		454CC4B12182056000E620F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		454CC4B32182056000E620F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		454CC4B32182056000E620F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		454CC4B62182056000E620F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		454CC4B82182056100E620F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		454CC4BB2182056100E620F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		454CC4CD2182056100E620F5 /* ViperTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		454CC4D12182056100E620F5 /* ViperTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperTestUITests.swift; sourceTree = "<group>"; };
 		454CC4D32182056100E620F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		454CC4DF21821EBD00E620F5 /* HomeViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBuilder.swift; sourceTree = "<group>"; };
+		454CC4E12182280000E620F5 /* AppColorDataAccessObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorDataAccessObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				454CC4B12182056000E620F5 /* AppDelegate.swift */,
-				454CC4B32182056000E620F5 /* ViewController.swift */,
+				454CC4E12182280000E620F5 /* AppColorDataAccessObject.swift */,
+				454CC4DF21821EBD00E620F5 /* HomeViewBuilder.swift */,
+				454CC4B32182056000E620F5 /* HomeViewController.swift */,
 				454CC4B52182056000E620F5 /* Main.storyboard */,
 				454CC4B82182056100E620F5 /* Assets.xcassets */,
 				454CC4BA2182056100E620F5 /* LaunchScreen.storyboard */,
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454CC4B42182056000E620F5 /* ViewController.swift in Sources */,
+				454CC4E22182280000E620F5 /* AppColorDataAccessObject.swift in Sources */,
+				454CC4E021821EBD00E620F5 /* HomeViewBuilder.swift in Sources */,
+				454CC4B42182056000E620F5 /* HomeViewController.swift in Sources */,
 				454CC4B22182056000E620F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63JNZL9NHF;
 				INFOPLIST_FILE = ViperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63JNZL9NHF;
 				INFOPLIST_FILE = ViperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

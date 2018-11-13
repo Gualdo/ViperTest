@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ViperTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xbe-e3-HbN">
+                                <rect key="frame" x="30" y="120" width="315" height="170"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="46a-VY-ofk">
+                                        <rect key="frame" x="-2" y="0.0" width="319" height="31"/>
+                                        <connections>
+                                            <action selector="onRedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mSj-dC-gwr"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="CP1-fH-zoU">
+                                        <rect key="frame" x="-2" y="70" width="319" height="31"/>
+                                        <connections>
+                                            <action selector="onGreenValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ec5-9h-9zQ"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="aNA-PC-Xmp">
+                                        <rect key="frame" x="-2" y="140" width="319" height="31"/>
+                                        <connections>
+                                            <action selector="onBlueValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EAG-1N-YPc"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="iaO-x9-jnj"/>
+                                    <constraint firstAttribute="height" constant="170" id="xXc-yR-hFJ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RGB(0.0, 0.0, 0.0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cvV-4z-8ll">
+                                <rect key="frame" x="30" y="401" width="315" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="e1l-gv-XBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cvV-4z-8ll" firstAttribute="leading" secondItem="xbe-e3-HbN" secondAttribute="leading" id="3tT-SJ-TKz"/>
+                            <constraint firstItem="cvV-4z-8ll" firstAttribute="trailing" secondItem="xbe-e3-HbN" secondAttribute="trailing" id="Qi1-3F-4Xd"/>
+                            <constraint firstItem="xbe-e3-HbN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bnU-hI-alt"/>
+                            <constraint firstItem="cvV-4z-8ll" firstAttribute="top" secondItem="xbe-e3-HbN" secondAttribute="bottom" constant="111" id="qqV-6r-Ngh"/>
+                            <constraint firstItem="xbe-e3-HbN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvz-Ah-hCi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lblRgbValue" destination="cvV-4z-8ll" id="1jM-qJ-FVp"/>
+                        <outlet property="sliderBlue" destination="aNA-PC-Xmp" id="Xml-z1-diJ"/>
+                        <outlet property="sliderGreen" destination="CP1-fH-zoU" id="gaT-GG-U5M"/>
+                        <outlet property="sliderRed" destination="46a-VY-ofk" id="gT4-AS-yWh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
